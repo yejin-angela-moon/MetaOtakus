@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>Add a Card - MetaOtakus</title>
+  <title>Add Card - MetaOtakus</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -49,43 +49,57 @@
       display: block;
       width: 100%;
       padding: 1rem;
-      background-color: #0f8bff;
       color: #fff;
+      background-color: #68a195;
       border: none;
       border-radius: 0.25rem;
       font-weight: bold;
       cursor: pointer;
       transition: background-color 0.3s;
+      margin: 10px;
     }
 
     button:hover {
       background-color: #0c6cd6;
     }
+
+    .age-confirmation {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .age-confirmation input {
+      width: auto;
+      margin-right: 0.5rem;
+      margin-bottom: 0;
+    }
   </style>
 </head>
 <body>
   <div class="center-container">
-    <h1>Add a Card</h1>
+    <h1>Add Card</h1>
     
-    <form id="add-card-form" action="payment.html" method="post">
-      <label for="card-holder-name">Cardholder Name:</label>
-      <input type="text" id="card-holder-name" name="card_holder_name" required>
+    <form id="addcard-form" action="payment.html" method="post">
+      <label for="cardholder">Cardholder Name:</label>
+      <input type="text" id="cardholder" name="cardholder" required>
       
-      <label for="card-number">Card Number:</label>
-      <input type="text" id="card-number" name="card_number" required>
+      <label for="cardnumber">Card Number:</label>
+      <input type="text" id="cardnumber" name="cardnumber" required>
       
-      <label for="expiry-date">Expiry Date:</label>
-      <input type="text" id="expiry-date" name="expiry_date" placeholder="MM/YY" required>
+      <label for="expiry">Expiry Date:</label>
+      <input type="text" id="expiry" name="expiry" required>
       
-      <label for="cvc">CVC:</label>
-      <input type="text" id="cvc" name="cvc" required>
+      <label for="cvv">CVV:</label>
+      <input type="text" id="cvv" name="cvv" required>
+
+      <div class="age-confirmation">
+        <input type="checkbox" id="age-check" name="age-check" required>
+        <label for="age-check">I confirm that I am 18 years or older.</label>
+      </div>
       
-      <label for="age-verification">
-        <input type="checkbox" id="age-verification" name="age_verification" required>
-        I am 18 years or older
-      </label>
       
-      <button type="submit">Add Card & Proceed to Payment</button>
+      <button type="submit">Add Card</button>
     </form>
   </div>
 </body>

@@ -1,16 +1,18 @@
-document.getElementById('edit-profile-form').addEventListener('submit', function (event) {
+document.getElementById('edit-profile-form').addEventListener('submit', async (event) => {
     event.preventDefault();
   
-    const profilePictureInput = document.getElementById('profile-picture-input');
-    const userNameInput = document.getElementById('user-name-input');
-    const bioInput = document.getElementById('bio-input');
+    const profile = {
+      name: document.getElementById('name').value,
+      bio: document.getElementById('bio').value,
+      image: document.getElementById('profile-picture').files[0],
+    };
   
-    // Save the values in local storage
-    localStorage.setItem('profilePicture', profilePictureInput.value);
-    localStorage.setItem('userName', userNameInput.value);
-    localStorage.setItem('bio', bioInput.value);
-  
-    // Redirect to the "mypage.html" after saving the data
-    window.location.href = 'mypage.html';
+    try {
+      await saveProfile(profile);
+      // Redirect the user back to their 'my page' with the updated information
+      window.location.href = 'mypage.html';
+    } catch (error) {
+      console.error('Error saving profile:', error);
+    }
   });
   

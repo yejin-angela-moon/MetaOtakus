@@ -2,18 +2,28 @@ const profilePictureImg = document.querySelector('.profile-picture img');
 const userNameElement = document.querySelector('.user-name h2');
 const bioElement = document.querySelector('.bio p');
 
-// Get the values from local storage
-const profilePicture = localStorage.getItem('profilePicture');
-const userName = localStorage.getItem('userName');
-const bio = localStorage.getItem('bio');
+(async function () {
+  // Get the profile ID from local storage
+  const profileId = localStorage.getItem('profileId');
 
-// Update the elements with the saved values
-if (profilePicture) {
-  profilePictureImg.src = profilePicture;
-}
-if (userName) {
-  userNameElement.textContent = userName;
-}
-if (bio) {
-  bioElement.textContent = bio;
-}
+  if (profileId) {
+    try {
+      // Fetch the profile data from the back-end
+      const response = await fetch(`/api/profile/${profileId}`);
+      const profile = await response.json();
+
+      // Update the elements with the fetched data
+      if (profile.profilePicture) {
+        profilePictureImg.src = profile.profilePicture;
+      }
+      if (profile.userName) {
+        userNameElement.textContent = profile.userName;
+      }
+      if (profile.bio) {
+        bioElement.textContent = profile.bio;
+      }
+    } catch (error) {
+      console.error('Error fetching profile:', error);
+    }
+  }
+})();
