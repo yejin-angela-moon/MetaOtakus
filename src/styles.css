@@ -1,0 +1,203 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+  }
+  
+  header h1 {
+    margin: 0;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+  }
+  
+  header a {
+    text-decoration: none;
+  }
+  
+
+  h2 {
+    margin: 10px;
+  }
+  
+  .my-page-button {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: #6f4e9c;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .profile {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .bio {
+    margin: 1rem;
+    padding: 1px;
+  }
+
+  .posts-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .posts-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    list-style: none;
+  }
+  
+  
+  .post-image {
+    width: 600px;
+
+    object-fit: cover;
+    margin: 30px; /* Add some space between the images */
+  }
+  
+  
+
+  
+  .subscribe-button {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+  }
+  
+  .subscribe-button,
+  .floating-subscribe-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #68a195;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+  }
+  
+
+
+  .center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  
+    .floating-subscribe-button {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 50px;
+    max-width: 800px;
+    right: 1rem;
+  }
+
+  .my-page-button:hover {
+  background-color: #5c4181;
+}
+
+.subscribe-button:hover,
+.floating-subscribe-button:hover {
+  background-color: #4f7d74;
+}
+
+.edit-profile-button {
+  display: block;
+  margin: 1rem auto;
+  width: 150px;
+  background-color: #6f4e9c;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.edit-profile-button:hover {
+  background-color: #5c4181;
+}
+
+.profile-edit {
+  width: 80%;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+.profile-edit h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+
+.save-button {
+  display: block;
+  width: 150px;
+  margin: 1rem auto;
+  background-color: #6f4e9c;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+}
+
+.save-button:hover {
+  background-color: #5c4181;
+}
+
+

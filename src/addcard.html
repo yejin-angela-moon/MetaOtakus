@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Add a Card - MetaOtakus</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .center-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #ccc;
+      border-radius: 0.25rem;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      background-color: #0f8bff;
+      color: #fff;
+      border: none;
+      border-radius: 0.25rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0c6cd6;
+    }
+  </style>
+</head>
+<body>
+  <div class="center-container">
+    <h1>Add a Card</h1>
+    
+    <form id="add-card-form" action="payment.html" method="post">
+      <label for="card-holder-name">Cardholder Name:</label>
+      <input type="text" id="card-holder-name" name="card_holder_name" required>
+      
+      <label for="card-number">Card Number:</label>
+      <input type="text" id="card-number" name="card_number" required>
+      
+      <label for="expiry-date">Expiry Date:</label>
+      <input type="text" id="expiry-date" name="expiry_date" placeholder="MM/YY" required>
+      
+      <label for="cvc">CVC:</label>
+      <input type="text" id="cvc" name="cvc" required>
+      
+      <label for="age-verification">
+        <input type="checkbox" id="age-verification" name="age_verification" required>
+        I am 18 years or older
+      </label>
+      
+      <button type="submit">Add Card & Proceed to Payment</button>
+    </form>
+  </div>
+</body>
+</html>

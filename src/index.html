@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>MetaOtakus MVP</title>
+  <script>
+    function likePost(element) {
+      let counter = element.nextElementSibling;
+      let count = parseInt(counter.textContent);
+      count += 1;
+      counter.textContent = count;
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <a href="mypage.html">
+      <button class="my-page-button">My page</button>
+    </a>
+    <h1>MetaOtakus</h1>
+  </header>
+
+  <section class="profile">
+    <div class="profile-picture">
+      <img src="../images/mikasa.jpg" alt="Profile Picture" />
+    </div>
+    <div class="user-name">
+      <h2>Mikasa</h2>
+    </div>
+    <div class="bio">
+      <p>Your new favorite all natural pocket girl</p>
+    </div>
+    <a href="signup.html">
+      <button class="subscribe-button">Subscribe</button>
+    </a>
+  
+  </section>
+
+  <section class="posts-section">
+    <div class="posts-grid">
+      <img class="post-image" src="../images/grey.jpeg" alt="Post 1" />
+
+      <img class="post-image" src="../images/grey.jpeg" alt="Post 2" />
+
+      <img class="post-image" src="../images/grey.jpeg" alt="Post 3" />
+
+
+    </div>
+  </section>
+  
+  <a href="signup.html">
+    <button class="floating-subscribe-button">Subscribe</button>
+  </a>
+  
+
+  <script>
+    // Implement frontend logic, user authentication, payment, and subscription management
+  </script>
+</body>
+</html>

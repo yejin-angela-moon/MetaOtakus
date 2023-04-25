@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Sign Up - MetaOtakus</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .center-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #ccc;
+      border-radius: 0.25rem;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      color: #fff;
+      background-color: #68a195;
+      border: none;
+      border-radius: 0.25rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin: 10px;
+    }
+
+    button:hover {
+      background-color: #0c6cd6;
+    }
+
+    .google-btn {
+      background-color: #4285F4;
+    }
+
+    .google-btn:hover {
+      background-color: #357ae8;
+    }
+
+    .twitter-btn {
+      background-color: #1DA1F2;
+    }
+
+    .twitter-btn:hover {
+      background-color: #1a90d9;
+    }
+
+    .or-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .or-line {
+      flex-grow: 1;
+      height: 1px;
+      background-color: #ccc;
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="center-container">
+    <h1>Sign Up</h1>
+    
+    <form id="signup-form" action="addcard.html" method="post">
+      <button type="button" class="google-btn">Sign Up with Google</button>
+      <button type="button" class="twitter-btn">Sign Up with Twitter</button>
+      
+      <div class="or-container">
+        <span class="or-line"></span>
+        <span>or</span>
+        <span class="or-line"></span>
+      </div>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+</body>
+</html>
