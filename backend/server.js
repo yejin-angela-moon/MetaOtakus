@@ -22,11 +22,15 @@ MongoClient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }, (e
   // client.close();
 });
 
-
 const app = express();
+const path = require('path');
+
 app.use(cors());
 app.use(express.json());
 app.use(passport.initialize());
+
+app.use(express.static(path.join(__dirname, '../src')));
+
 
 // Import routes
 const usersRoute = require('./routes/users');
