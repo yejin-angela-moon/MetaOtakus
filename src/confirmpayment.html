@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Confirm Payment - MetaOtakus</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .center-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .confirmation-message {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    button {
+      display: block;
+      width: 50%;
+      padding: 1rem;
+      color: #fff;
+      background-color: #68a195;
+      border: none;
+      border-radius: 0.25rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin: 10px;
+    }
+
+    button:hover {
+      background-color: #0c6cd6;
+    }
+  </style>
+</head>
+<body>
+  <div class="center-container">
+    <div class="confirmation-message">
+      <h2>Payment Successful!</h2>
+      <p>Your payment of £10 has been processed successfully.</p>
+    </div>
+    
+    <button onclick="location.href='index.html'">Go Back to Home</button>
+  </div>
+</body>
+</html>
