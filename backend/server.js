@@ -1,9 +1,12 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const passport = require('passport');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const stripe = require('stripe')('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');
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+const paymentRoutes = require('./routes/paymentRoutes');
+
 
 
 const MongoClient = require('mongodb').MongoClient;
@@ -37,6 +40,8 @@ app.use(express.static(path.join(__dirname, '../src')));
 // Import routes
 const usersRoute = require('./routes/users');
 app.use('/users', usersRoute);
+app.use('/payment', paymentRoutes);
+
 
 // Connect to MongoDB Atlas
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://js.stripe.com/v3/"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
@@ -74,6 +75,17 @@
       margin-right: 0.5rem;
       margin-bottom: 0;
     }
+
+    .expiry-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+    }
+    
+    .expiry-container input {
+      width: 48%;
+      margin-bottom: 0;
+    }
   </style>
 </head>
 <body>
@@ -87,8 +99,11 @@
       <label for="cardnumber">Card Number:</label>
       <input type="text" id="cardnumber" name="cardnumber" required>
       
-      <label for="expiry">Expiry Date:</label>
-      <input type="text" id="expiry" name="expiry" required>
+      <label>Expiry Date:</label>
+      <div class="expiry-container">
+        <input type="text" id="expiry-month" name="expiry-month" placeholder="MM" required>
+        <input type="text" id="expiry-year" name="expiry-year" placeholder="YY" required>
+      </div>
       
       <label for="cvv">CVV:</label>
       <input type="text" id="cvv" name="cvv" required>
