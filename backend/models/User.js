@@ -10,14 +10,6 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  name: {
-    type: String,
-    required: true,
-  },
-  bio: {
-    type: String,
-    required: false,
-  },
   // Add any additional fields you require for your user model
 });
 
