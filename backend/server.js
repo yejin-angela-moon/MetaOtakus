@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const stripe = require('stripe')('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');
+
 
 const MongoClient = require('mongodb').MongoClient;
 
