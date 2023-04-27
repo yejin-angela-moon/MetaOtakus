@@ -27,3 +27,18 @@ router.put('/profile', passport.authenticate('local', { session: false }), async
     }
   });
 
+
+  const Post = require('../models/Post');
+
+  // Add a route to get the user's posts
+  router.get('/user-posts', async (req, res) => {
+    try {
+      const posts = await Post.find({ user: req.user.id }); // Fetch posts for the authenticated user
+      res.json(posts);
+    } catch (err) {
+      console.error(err);
+      res.status(500).send('Server Error');
+    }
+  });
+  
+
